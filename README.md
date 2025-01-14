@@ -44,3 +44,25 @@ For each line of a ticket (containing three numbers, each 0, 1, or 2):
    ```bash
    git clone https://github.com/Sandeepreddy98/lottery-system.git
    cd lottery-system
+2. Install dependencies:
+   ```bash
+   npm install
+3. Start the server:
+   ```bash
+   npm start
+
+## API Endpoints
+
+### 1. **Create a Ticket**
+**Endpoint:**  
+`POST /ticket`  
+
+**Description:**  
+Creates a new ticket with the specified number of lines.  
+
+**Request Body:**  
+```json
+{
+  "n": 3
+}
+

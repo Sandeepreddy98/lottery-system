@@ -1,5 +1,5 @@
 const { Ticket, tickets } = require("../models/ticket");
-const generateLines = require("../utils/generateLines");
+const generateLines = require("../utils/helper");
 
 let idCounter = 1;
 
