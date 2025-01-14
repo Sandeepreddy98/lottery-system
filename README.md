@@ -66,3 +66,9 @@ Creates a new ticket with the specified number of lines.
   "n": 3
 }
 
+
+**Example CURL Command:**
+```bash
+curl -X POST http://localhost:3000/ticket \
+-H "Content-Type: application/json" \
+-d '{"n": 3}'
