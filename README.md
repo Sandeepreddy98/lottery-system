@@ -42,5 +42,5 @@ For each line of a ticket (containing three numbers, each 0, 1, or 2):
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/lottery-system.git
+   git clone https://github.com/Sandeepreddy98/lottery-system.git
    cd lottery-system
