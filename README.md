@@ -127,5 +127,5 @@ curl -X PUT http://localhost:3000/status/1
 ## Testing 
 Run tests:
    ```bash
-   npm start
+   npm run test
    ```
