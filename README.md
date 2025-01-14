@@ -56,7 +56,7 @@ For each line of a ticket (containing three numbers, each 0, 1, or 2):
 #### 1. Create a Ticket
 
 ```http
-  POST /ticket
+POST /ticket
 ```
 
 | Parameter | Type     | Description                |
@@ -70,7 +70,7 @@ curl -X POST http://localhost:3000/ticket -H "Content-Type: application/json" -d
 #### 2. Return list of tickets
 
 ```http
-  GET /ticket
+GET /ticket
 ```
 
 | Parameter | Type     | Description                |
@@ -84,7 +84,7 @@ curl -X GET http://localhost:3000/ticket
 #### 3. Get individual ticket
 
 ```http
-  GET /ticket/{id}
+GET /ticket/{id}
 ```
 
 | Parameter | Type     | Description                |
