@@ -112,7 +112,7 @@ curl -X PUT http://localhost:3000/ticket/1 -H "Content-Type: application/json" -
 #### 5. Retrieve status of ticket
 
 ```http
-  PUT /status/{id}
+PUT /status/{id}
 ```
 
 | Parameter | Type     | Description                |
