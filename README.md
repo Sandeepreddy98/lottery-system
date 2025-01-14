@@ -1,3 +1,4 @@
+
 # Lottery System API
 
 This is a RESTful API for a simple lottery system that allows users to create tickets, amend them with additional lines, and check their status. The application is built using Node.js and follows clean code principles.
@@ -50,25 +51,75 @@ For each line of a ticket (containing three numbers, each 0, 1, or 2):
 3. Start the server:
    ```bash
    npm start
+## API Reference
 
-## API Endpoints
+#### 1. Create a Ticket
 
-### 1. **Create a Ticket**
-**Endpoint:**  
-`POST /ticket`  
+```http
+  POST /ticket
+```
 
-**Description:**  
-Creates a new ticket with the specified number of lines.  
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `n` | `string` | Creates a new ticket with the specified number of lines |
 
-**Request Body:**  
-```json
-{
-  "n": 3
-}
+#### Example CURL Command:
+```
+curl -X POST http://localhost:3000/ticket -H "Content-Type: application/json" -d '{"n": 3}'
+```
+#### 2. Return list of tickets
 
+```http
+  GET /ticket
+```
 
-**Example CURL Command:**
-```bash
-curl -X POST http://localhost:3000/ticket \
--H "Content-Type: application/json" \
--d '{"n": 3}'
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| NA | NA | Fetches a list of all tickets. |
+
+#### Example CURL Command:
+```
+curl -X GET http://localhost:3000/ticket
+```
+#### 3. Get individual ticket
+
+```http
+  GET /ticket/{id}
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| NA | NA | Fetches the details of a specific ticket by ID. |
+
+#### Example CURL Command:
+```
+curl -X GET http://localhost:3000/ticket/1
+```
+#### 4. Amend ticket lines
+
+```http
+  PUT /ticket/{id}
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `n` | `string` | Adds additional lines to an existing ticket. A ticket cannot be amended if its status has already been checked. |
+
+#### Example CURL Command:
+```
+curl -X PUT http://localhost:3000/ticket/1 -H "Content-Type: application/json" -d '{"n": 2}'
+```
+#### 5. Retrieve status of ticket
+
+```http
+  PUT /status/{id}
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| NA | NA | Checks the status of a ticket, calculating the results for all lines and sorting them by outcome. Once checked, the ticket cannot be amended. |
+
+#### Example CURL Command:
+```
+curl -X PUT http://localhost:3000/status/1
+```
