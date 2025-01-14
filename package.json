@@ -1,10 +1,10 @@
 {
-  "name": "puppolo",
+  "name": "Token System",
   "version": "1.0.0",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "test": "jest"
   },
   "author": "G Sandeep",
   "license": "ISC",
@@ -12,5 +12,9 @@
   "dependencies": {
     "express": "^4.21.2",
     "uuid": "^11.0.5"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
   }
 }
