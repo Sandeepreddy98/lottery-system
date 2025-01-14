@@ -98,7 +98,7 @@ curl -X GET http://localhost:3000/ticket/1
 #### 4. Amend ticket lines
 
 ```http
-  PUT /ticket/{id}
+PUT /ticket/{id}
 ```
 
 | Parameter | Type     | Description                |
